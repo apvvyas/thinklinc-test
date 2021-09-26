@@ -24,7 +24,7 @@ Route::prefix('user')->group(function () {
 Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('youtube')->group(function () {
         Route::name('youtube.')->group(function () {
-            Route::get('search', [SearchController::class, 'index'])->name('search');
+            Route::get('search', [SearchController::class, 'search'])->name('search');
             Route::get('show/{youtube}', [SearchController::class, 'show'])->name('show');
         });
     });
