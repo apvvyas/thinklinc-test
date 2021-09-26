@@ -26,15 +26,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('youtube:fetch 30')->everyMinute();
     }
-
-    protected function shortSchedule(ShortSchedule $shortSchedule)
-    {
-        // this artisan command will run every second
-        $shortSchedule->command('youtube:fetch')->everySeconds(10);
-    }
-
     /**
      * Register the commands for the application.
      *
